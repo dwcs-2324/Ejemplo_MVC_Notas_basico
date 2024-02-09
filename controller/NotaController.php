@@ -2,9 +2,9 @@
 
 class NotaController {
 
-    public $page_title;
-    public $view;
-    private $notaServicio;
+    public string $page_title;
+    public string $view;
+    private INotaServicio $notaServicio;
 
     private const VIEW_FOLDER ="nota".DIRECTORY_SEPARATOR;
 

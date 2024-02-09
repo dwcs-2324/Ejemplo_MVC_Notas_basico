@@ -1,7 +1,7 @@
 <?php
 
 
-class NotaServicio
+class NotaServicio implements INotaServicio
 {
 
     private INotaRepository $repository;
@@ -24,7 +24,7 @@ class NotaServicio
 
     /* Get note by id */
 
-    public function getNoteById($id)
+    public function getNoteById($id): Nota
     {
         return $this->repository->getNotaById($id);
     }
@@ -32,7 +32,7 @@ class NotaServicio
     /* Save note */
 
     //Se usa para crear una nueva nota y para editar una ya existente
-    public function save(Nota $nota)
+    public function save(Nota $nota):Nota
     {
 
         $notaToVista = null;
