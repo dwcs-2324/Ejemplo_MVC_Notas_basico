@@ -65,6 +65,7 @@ class NotaController {
         //para saber si ha habido error o no
         //Solo se establece un campo "error" si se ha realizado un (save) exitoso o no
         if ($notaGuardada == null) {
+            $notaGuardada = new Nota(); //creamos una nota vacía para poder añadirle el estado
             $notaGuardada->setEstado(Util::OPERATION_NOK);
         } else {
             $notaGuardada->setEstado(Util::OPERATION_OK);

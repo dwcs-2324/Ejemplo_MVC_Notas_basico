@@ -45,6 +45,7 @@ class NotaServicio
             $notaToVista = $this->repository->create($nota);
         }
 
+       
         return $notaToVista;
     }
 

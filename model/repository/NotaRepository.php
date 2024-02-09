@@ -33,7 +33,7 @@ class NotaRepository implements INotaRepository {
         return $this->arrayNotas;
     }
 
-    public function saveNotas(array $notas): bool {
+    private function saveNotas(array $notas): bool {
 
         $writtenBytes = file_put_contents($this->filePath, json_encode($notas));
 
